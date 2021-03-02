@@ -31,4 +31,9 @@ class DateTimeTest {
         ZonedDateTime zonedDateTime = localDateTime.atZone(ZoneId.systemDefault());
         Date date3 = Date.from(zonedDateTime.toInstant());
     }
+
+    @Test
+    void currentDateTest() {
+        Date now = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
+    }
 }
